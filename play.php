@@ -6,11 +6,11 @@ require_once  __DIR__.'/lib/functions.php';
  * @param Ship $someship
  */
 function printShipSummary($someship){
-  echo "Ship1 Name is :". $someship->name;
+  echo "Ship1 Name is :". $someship->getName();
   echo "<br>";
   echo "Ship2 Name is :". $someship->getName();
   echo "<br>";
-  echo "Ship Power :". $someship->weaponPower;
+  echo "Ship Power :". $someship->getWeaponPower();
   echo "<br>";
   echo $someship->getNameandSpec(false);
   echo "<br>";
@@ -18,12 +18,12 @@ function printShipSummary($someship){
 }
 
 $myship = new Ship();
-$myship->name = "Reena Raghavan";
-$myship->weaponPower = 10;
+$myship->setName("Reena Raghavan");
+$myship->setWeaponPower(10);
 
 $othership = new Ship();
-$othership->name = "Ragesh Raghavan";
-$othership->weaponPower = 20;
+$othership->setName("Ragesh Raghavan");
+$othership->setWeaponPower(20);
 
 printShipSummary($myship);
 printShipSummary($othership);
@@ -33,8 +33,8 @@ print_r($ships);
 echo "</pre>";
 
 foreach ($ships as $ship){
-  echo $ship->name;
-  echo $ship->weaponPower;
+  echo $ship->getName();
+  echo $ship->getWeaponPower();
 }
 
 //$someship->sayHello();

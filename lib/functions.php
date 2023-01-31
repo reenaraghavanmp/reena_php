@@ -41,8 +41,8 @@ function getShips(){
   $ships = array();
 
   $myship = new Ship();
-  $myship->name = "Jasna";
-  $myship->weaponPower = 30;
+  $myship->setName("Jasna");
+  $myship->setWeaponPower(40);
 
   $ships['NewShip'] = $myship;
   return $ships;
